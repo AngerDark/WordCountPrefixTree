@@ -54,7 +54,7 @@ public:
 	PTree();
 
 	//Initialize tree with string
-	void InitTree(std::string && InString);
+	void InitTree(std::string const* InString);
 
 	//Prints words count
 	void PrintWordInfo();

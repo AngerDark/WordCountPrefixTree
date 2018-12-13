@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
 
 	PTree pTree;
 	//Init tree with text
-	pTree.InitTree(move(text));
+	pTree.InitTree(&text);
 	//Print word infos
 	pTree.PrintWordInfo();	
 	

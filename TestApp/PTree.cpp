@@ -4,15 +4,17 @@
 #include <iostream>
 
 PTree::PTree():
-	wordSeparatorSymbols({ ',' , '.', '-', ':', ';', '!', '?', '\'', '"', ' ', '(', ')', '\n' })
+	wordSeparatorSymbols({ ',' , '.', '-', ':', ';', '!', '?', '\'', '"', ' ', '(', ')', '\n', '\r' })
 {
 }
 
-void PTree::InitTree(std::string&& InString)
+void PTree::InitTree(std::string const* InString)
 {
 	Root = new PTNode();
+	
 	Current = Root;
-	for (auto symbol : InString)
+
+	for (auto symbol : *InString)
 	{
 		AddNode(symbol);
 	}
